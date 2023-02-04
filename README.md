@@ -7,61 +7,58 @@
 <a href="https://goreportcard.com/report/github.com/obolnetwork/charon"><img src="https://goreportcard.com/badge/github.com/obolnetwork/charon"></a>
 <a href="https://github.com/ObolNetwork/charon/actions/workflows/golangci-lint.yml"><img src="https://github.com/obolnetwork/charon/workflows/golangci-lint/badge.svg"></a></p>
 
-This repo contains the source code for the distributed validator client _Charon_ (pronounced 'kharon'); a HTTP middleware client for Ethereum Staking that enables you to safely run a single validator across a group of independent nodes.
+Bu depo, dağıtılmış doğrulama istemcisi _Charon_ ('kharon' olarak telaffuz edilir) için kaynak kodunu içerir; Ethereum Staking için, bir grup bağımsız düğümde tek bir doğrulayıcıyı güvenli bir şekilde çalıştırmanıza olanak tanıyan bir HTTP ara yazılım istemcisi.
 
-Charon is accompanied by a webapp called the [Distributed Validator Launchpad](https://goerli.launchpad.obol.tech/) for distributed validator key creation.
-
-Charon is used by stakers to distribute the responsibility of running Ethereum Validators across a number of different instances and client implementations.
+Charon'a dağıtılmış doğrulayıcı anahtar oluşturma için [Dağıtılmış Doğrulayıcı Başlatma Çubuğu](https://goerli.launchpad.obol.tech/) adlı bir web uygulaması eşlik ediyor.
+Charon, staker'lar tarafından Ethereum Doğrulayıcılarını çalıştırma sorumluluğunu bir dizi farklı örnek ve istemci uygulamasında dağıtmak için kullanılır.
 
 ![Example Obol Cluster](./docs/images/DVCluster.png)
 
-###### A Distributed Validator Cluster that uses the Charon client to hedge client and hardware failure risks
+###### İstemci ve donanım hatası risklerinden korunmak için Charon istemcisini kullanan Dağıtılmış Doğrulayıcı Kümesi
 
-## Quickstart
+## Hızlı başlangıç
 
-The easiest way to test out charon is with the [charon-distributed-validator-cluster](https://github.com/ObolNetwork/charon-distributed-validator-cluster) repo
-which contains a docker compose setup for running a full charon cluster on your local machine.
+Charon'u test etmenin en kolay yolu [charon-distributed-validator-cluster](https://github.com/ObolNetwork/charon-distributed-validator-cluster) deposudur. Yerel makinenizde tam bir charon kümesi çalıştırmak için bir docker oluşturma kurulumu içerir.
 
-## Documentation
+## Dokümantasyon
 
-The [Obol Docs](https://docs.obol.tech/) website is the best place to get started.
-The important sections are [intro](https://docs.obol.tech/docs/intro),
-[key concepts](https://docs.obol.tech/docs/int/key-concepts) and [charon](https://docs.obol.tech/docs/dv/introducing-charon).
-
+[Obol Belgeleri](https://docs.obol.tech/) web sitesi, başlamak için en iyi yerdir.
+Önemli bölümler [intro](https://docs.obol.tech/docs/intro),
+[anahtar kavramlar](https://docs.obol.tech/docs/int/key-concepts) ve [charon](https://docs.obol.tech/docs/dv/introduction-charon).
 For detailed documentation on this repo, see the [docs](docs) folder:
 
-- [Configuration](docs/configuration.md): Configuring a charon node
-- [Architecture](docs/architecture.md): Overview of charon cluster and node architecture
-- [Project Structure](docs/structure.md): Project folder structure
-- [Branching and Release Model](docs/branching.md): Git branching and release model
-- [Go Guidelines](docs/goguidelines.md): Guidelines and principals relating to go development
-- [Contributing](docs/contributing.md): How to contribute to charon; githooks, PR templates, etc.
+- [Yapılandırma](docs/configuration.md): Bir charon düğümünün yapılandırılması
+- [Architecture](docs/architecture.md): Charon kümesi ve düğüm mimarisine genel bakış
+- [Proje Yapısı](docs/structure.md): Proje klasörü yapısı
+- [Dallanma ve Yayınlama Modeli](docs/branching.md): Git dallanma ve yayınlanma modeli
+- [Go Yönergeleri](docs/goguidelines.md): go geliştirmeye ilişkin yönergeler ve ilkeler
+- [Katkıda Bulunma](docs/contributing.md): Charon'a nasıl katkıda bulunulur; githook'lar, PR şablonları vb.
 
-There is always the [charon godocs](https://pkg.go.dev/github.com/obolnetwork/charon) for the source code documentation.
+Kaynak kodu dokümantasyonu için her zaman [charon godocs](https://pkg.go.dev/github.com/obolnetwork/charon) vardır.
 
-## Supported Consensus Layer Clients
+## Desteklenen Consensus Layer İstemcileri
 
-Charon integrates into the Ethereum consensus stack as a middleware between the validator client
-and the beacon node via the official [Eth Beacon Node REST API](https://ethereum.github.io/beacon-APIs/#/).
-Charon supports any upstream beacon node that serves the Beacon API.
-Charon aims to support any downstream standalone validator client that consumes the Beacon API.
+Charon, doğrulama istemcisi arasında bir ara katman yazılımı olarak Ethereum konsensüs yığınına entegre olur.
+ve resmi [Eth Beacon Node REST API](https://ethereum.github.io/beacon-APIs/#/) yoluyla işaret düğümü.
+Charon, Beacon API'sine hizmet eden herhangi bir yukarı akış işaret düğümünü destekler.
+Charon, Beacon API'sini kullanan herhangi bir aşağı akış bağımsız doğrulayıcı istemcisini desteklemeyi amaçlamaktadır.
 
 | Client                                             | Beacon Node | Validator Client | Notes                                   |
 | -------------------------------------------------- | :---------: | :--------------: |-----------------------------------------|
-| [Teku](https://github.com/ConsenSys/teku)          |     ✅      |        ✅        | Fully supported                         |
-| [Lighthouse](https://github.com/sigp/lighthouse)   |     ✅      |        ✅        | Fully supported                         |
-| [Lodestar](https://github.com/ChainSafe/lodestar)  |     ✅      |       \*️⃣        | DVT compatibility issue                 |
-| [Vouch](https://github.com/attestantio/vouch)      |     \*️⃣     |        ✅        | Only validator client provided          |
-| [Prysm](https://github.com/prysmaticlabs/prysm)    |     ✅      |        🛑        | Validator client requires gRPC API      |
-| [Nimbus](https://github.com/status-im/nimbus-eth2) |     ✅      |        ✅        | Soon to be supported |
+| [Teku](https://github.com/ConsenSys/teku)          |     ✅      |        ✅        | Tam destekli                        |
+| [Lighthouse](https://github.com/sigp/lighthouse)   |     ✅      |        ✅        | Tam destekli                       |
+| [Lodestar](https://github.com/ChainSafe/lodestar)  |     ✅      |       \*️⃣        | DVT uyumluluk sorunu              |
+| [Vouch](https://github.com/attestantio/vouch)      |     \*️⃣     |        ✅        | Sağlanan yalnızca doğrulayıcı istemci          |
+| [Prysm](https://github.com/prysmaticlabs/prysm)    |     ✅      |        🛑        | Validator istemcisi, gRPC API gerektirir      |
+| [Nimbus](https://github.com/status-im/nimbus-eth2) |     ✅      |        ✅        | Yakında desteklenecek |
 
-## Project Status
+## Proje durumu
 
-It is still early days for the Obol Network and things are under active development.
-We are moving fast so check back in regularly to track the progress.
+Obol Ağı için henüz ilk günler ve işler aktif olarak geliştiriliyor.
+Hızlı ilerliyoruz, bu nedenle ilerlemeyi takip etmek için düzenli olarak kontrol edin.
 
-Charon is a distributed validator, so its main responsibility is performing validation duties.
-The following table outlines which clients have produced which duties on a public testnet, and which are still under construction (🚧 )
+Charon dağıtılmış bir doğrulayıcıdır, dolayısıyla ana sorumluluğu doğrulama görevlerini yerine getirmektir.
+Aşağıdaki tablo, hangi müşterilerin hangi görevleri genel bir test ağında ürettiğini ve hangilerinin hala yapım aşamasında olduğunu özetlemektedir.(🚧 )
 
 | Duty \ Client                        |                      Teku                      |                    Lighthouse                    | Lodestar | Nimbus | Vouch | Prysm |
 |--------------------------------------|:----------------------------------------------:|:------------------------------------------------:|:--------:|:------:|:-----:|:-----:|
