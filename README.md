@@ -1,5 +1,5 @@
 <div align="center"><img src="./docs/images/charonlogo.svg" /></div>
-<h1 align="center">Charon<br/>The Distributed Validator middleware client</h1>
+<h1 align="center">Charon<br/>Dağıtılmış Validator ara katman yazılımı istemcisi</h1>
 
 <p align="center"><a href="https://github.com/obolnetwork/charon/releases/"><img src="https://img.shields.io/github/tag/obolnetwork/charon.svg"></a>
 <a href="https://github.com/ObolNetwork/charon/blob/main/LICENSE"><img src="https://img.shields.io/github/license/obolnetwork/charon.svg"></a>
