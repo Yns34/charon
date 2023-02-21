@@ -1,97 +1,92 @@
-# Contributing to Charon
+# Charon'a katkı
 
-🎉 Thanks for taking the time to contribute, we really appreciate it.
+🎉 Zaman ayırıp katkıda bulunduğunuz için teşekkürler, gerçekten müteşekkiriz.
 
-To get started, check out the [Obol Docs](https://docs.obol.tech/) and other Charon repo [docs](.).
+Başlamak için [Obol Belgelerine](https://docs.obol.tech/) ve diğer Charon deposuna [belgelere](.) bakın.
 
-We keep a simple set of guidelines to streamline the contribution process,
-loosely based on the [Atom contributing guide](https://github.com/atom/atom/blob/master/CONTRIBUTING.md).
+Katkı sürecini düzene sokmak için basit bir kurallar dizisini tutuyoruz.
+genel olarak [Atom katkıda bulunma kılavuzuna](https://github.com/atom/atom/blob/master/CONTRIBUTING.md) dayalıdır.
 
-## Responsible Disclosure
+## Sorumlu Açıklama
 
-⚠️ We take the security of our users very seriously.
-If you believe you have found a security issue, please **responsibly disclose** it to `security@obol.tech`
-instead of opening a public issue or PR on GitHub.
+⚠️ Kullanıcılarımızın güvenliğini son derece ciddiye alıyoruz.
+Bir güvenlik sorunu bulduğunuzu düşünüyorsanız, lütfen bunu instead of opening a public issue or PR on GitHub **sorumlu bir şekilde** `security@obol.tech` adresine bildirin.
 
-## Coordinating work flows
 
-- If you have found a bug...
-    - Check for existing bug reports of the same issue in GitHub.
-    - Do not post about it publicly if it is a suspected vulnerability to protect Obol's users;
-      instead use `security@obol.tech`.
-    - Maybe send a message in relevant community channels if you are unsure whether you are seeing a technical issue.
-    - Open a GitHub issue if everything else checks out 🤓
-- Are you thinking of a small change that just makes sense? Feel free to submit a PR.
-- If you're envisioning a larger feature or are just looking for a discussion,
-  let's chat in the [Obol Discord](https://discord.gg/n6ebKsX46w/) under `#dev-community`.
-    - A quick sync before coding avoids conflicting work and makes large PRs much more likely to be accepted.
-    - 👀 The Discord channel is currently _invite-only_ to prevent spam. Please ping a team member to get access.
+## İş akışlarının koordinasyonu
 
-## Submitting changes
+- Bir hata bulduysanız...
+     - GitHub'da aynı sorunla ilgili mevcut hata raporlarını kontrol edin.
+     - Obol kullanıcılarını korumak için şüphe edilen bir güvenlik açığıysa, bu konuda herkese açık bir şekilde gönderi paylaşmayın;
+       bunun yerine "security@obol.tech" kullanın.
+     - Teknik bir sorun görüp görmediğinizden emin değilseniz ilgili topluluk kanallarına bir mesaj gönderebilirsiniz.
+     - Her şey yolundaysa bir GitHub sorunu açın 🤓
+- Mantıklı olan küçük bir değişiklik mi düşünüyorsun? PR göndermekten çekinmeyin.
+- Daha büyük bir özellik planlıyorsanız veya yalnızca bir tartışma arıyorsanız,
+   [Obol Discord](https://discord.gg/n6ebKsX46w/) içerisinde `#dev-community` altında sohbet edelim.
+     - Kodlamadan önce hızlı bir senkronizasyon, çakışan işleri önler ve büyük PR'lerin kabul edilme olasılığını çok daha artırır.
+     - 👀 Spam önlemek için Discord kanalı şu anda _davetli_ olarak açılmıştır. Erişim elde etmek için lütfen bir ekip üyesine ping atın.
 
-### Community Contributions (Pull Requests)
+## Değişiklikleri gönderme
 
-Feel free to fork the Charon repo and submit a pull request with your suggested changes.
+### Topluluk Katkıları (Pull İstekleri)
 
-You will then need to sign our Contributor License Agreement (CLA), which will show up as a comment
-from a bot in this pull request after you open it. We cannot review code without a signed CLA.
+Charon deposunu fork yapmaktan çekinmeyin ve önerilen değişikliklerinizle birlikte bir pull isteği gönderin.
 
-As mentioned above, please file an associated issue if this pull request is non-trivial and
-requires context for our team to understand. All features and most bug fixes should have
-an associated issue with a design discussed and decided upon. Small bug fixes and documentation
-improvements don't need issues.
+Ardından, bir yorum olarak görünecek olan Katılımcı Lisans Sözleşmemizi (CLA) imzalamanız gerekecektir.
+Açtıktan sonra bu pull isteğinde bir bottan İmzalı bir CLA olmadan kodu inceleyemeyiz.
 
-New features and bug fixes must have tests. Documentation may need to be updated. If you're
-unsure what to update, open the PR, and we'll discuss during review.
+Yukarıda belirtildiği gibi, bu çekme isteği önemsiz değilse ve ekibimizin anlaması için bağlam gerektiriyorsa lütfen ilgili bir sorun bildirin. Tüm özellikler ve çoğu hata düzeltmesi, tartışılan ve üzerinde karar verilen bir tasarımla ilgili bir soruna sahip olmalıdır. Küçük hata düzeltmeleri ve dokümantasyon iyileştirmeleri sorun gerektirmez.
 
-Note that PRs updating dependencies and new Go versions are not accepted. Please file an issue instead.
+Yeni özellikler ve hata düzeltmeleri mutlaka test edilmelidir. Belgelerin güncellenmesi gerekebilir. Neyi güncelleyeceğinizden emin değilseniz, PR'yi açın, inceleme sırasında tartışacağız.
 
-Note: PRs can only be merged by obol-bulldozer bot. It is author's responsibility to add label `merge when ready` after getting approval.
+Bağımlılıkları ve yeni Go sürümlerini güncelleyen PR'lerin kabul edilmediğini unutmayın. Lütfen bunun yerine bir sorun bildirin.
 
-> TL;DR: Open an Issue with details and motivation behind a PR.
+Not: PR'ler yalnızca obol-buldozer botu tarafından birleştirilebilir. Onay alındıktan sonra `hazır olduğunda birleştir' etiketinin eklenmesi yazarın sorumluluğundadır.
 
-### Core Dev Contributions
+> TL;DR: Ayrıntıları ve bir PR'ın arkasındaki motivasyonu içeren bir Sayı açın.
 
-- Publish your work in a branch under this [charon repo](https://github.com/ObolNetwork/charon).
-- Keep track of all roadmap and feature work, as well as bug fixes and smaller changes via GitHub [issues](https://github.com/ObolNetwork/charon/issues).
-- Suggested branch names: `<name>/<feature>`, e.g. `oisin/improve-docs` or `richard/fix-discv5-panic`.
-- Configure Git to use your `obol.tech` email.
+### Çekirdek Geliştirme Katkıları
 
-## Style Guide
+- Çalışmanızı bu [charon repo](https://github.com/ObolNetwork/charon) altında bir şubede yayınlayın.
+- GitHub [sorunlar](https://github.com/ObolNetwork/charon/issues) aracılığıyla tüm yol haritası ve özellik çalışmalarının yanı sıra hata düzeltmelerini ve daha küçük değişiklikleri takip edin.
+- Önerilen dal adları: `<ad>/<özellik>`, ör. "oisin/improve-docs" veya "richard/fix-discv5-panic".
+- Git'i "obol.tech" e-postanızı kullanacak şekilde yapılandırın.
 
-### Micro-commits on stable trunk
+## Stil Kılavuzu
 
-> TL;DR: Introduce change in small increments
+### Kararlı gövde üzerinde mikro taahhütler
 
-- Please see the [Branching and Release Model](branching.md) for more details about how we do branching and releases.
-- Multiple PRs per issue is encouraged.
-- This ensures small PRs that are easy to review, merge and test.
-- The issue can be closed once all PRs are completed.
-- Keeping track of completed and planned PRs via a checklist in the issue is a great idea.
+> TL;DR: Değişimi küçük artışlarla tanıtın
 
-### PR Template
+- Dallanma ve yayınları nasıl yaptığımız hakkında daha fazla ayrıntı için lütfen [Dallanma ve Sürüm Modeli](branching.md) belgesine bakın.
+- Sayı başına birden çok PR teşvik edilir.
+- Bu, gözden geçirilmesi, birleştirilmesi ve test edilmesi kolay küçük PR'ler sağlar.
+- Tüm PR'ler tamamlandıktan sonra konu kapatılabilir.
+- Sayıdaki bir kontrol listesi aracılığıyla tamamlanmış ve planlanan PR'ları takip etmek harika bir fikir.
 
-- **PRs are always squash merged into main**.
-- The PR title and body is used as the final squash-merged git commit message.
-- The PR's original git commits are therefore lost (so naming isn't specified)
-- **PR title format** is defined as:
-  - Following the [go team's commit format](https://github.com/golang/go/commits/master): `package[/path]: concise overview of change`
-  - Prefix identifies the primary package affected by the change.
-  - Prefix can be a single or double hierarchical package name, but not three or more. E.g. `app` , or `app/tracer`.
-  - The rest of the title must be a concise high-level overview in the present tense and starting with lower case.
-- **PR body format** is defined as:
-  - Start with detailed description of the change.
-  - Description should use proper grammar in present tense.
-  - Ends with a list of tags (some required, others optional) (`^tag: value of this tag\n`):
-  - `category`: required; one of: `refactor`, `bug`, `feature`, `docs`, `release`, `tidy`, `fixbuild`.
-  - `ticket`: required; URL of the Github issue just a reference, E.g. `#123` or `none`.
-  - `feature_flag`: optional; feature flag (as per `app/featureset` package) enabling/disabling this code.
-- Examples:
+### PR Şablonu
+
+- **PR'ler her zaman squash ile main'e birleştirilir**.
+- PR başlığı ve gövdesi, nihai squash birleştirilmiş git taahhüt mesajı olarak kullanılır.
+- PR'nin orijinal git taahhütleri bu nedenle kaybolur (bu nedenle adlandırma belirtilmez)
+- **PR başlık formatı** şu şekilde tanımlanır:
+   - [go team's commit format](https://github.com/golang/go/commits/master): "paket[/path]: değişikliğin kısa özeti"
+   - Önek, değişiklikten etkilenen birincil paketi tanımlar.
+   - Önek, tek veya çift hiyerarşik bir paket adı olabilir, ancak üç veya daha fazla olamaz. Örneğin. "uygulama" veya "uygulama/izleyici".
+   - Başlığın geri kalanı, şimdiki zamanda ve küçük harfle başlayan özlü, üst düzey bir genel bakış olmalıdır.
+- **PR gövde formatı** şu şekilde tanımlanır:
+   - Değişikliğin ayrıntılı açıklamasıyla başlayın.
+   - Açıklama, şimdiki zamanda uygun dilbilgisi kullanmalıdır.
+   - Bir etiket listesiyle biter (bazıları gerekli, diğerleri isteğe bağlıdır) (`^tag: bu etiketin değeri\n`):
+   - "kategori": gerekli; şunlardan biri: "refactor", "bug", "feature", "docs", "release", "tidy", "fixbuild".
+   - `bilet`: gerekli; Github sorununun URL'si yalnızca bir referanstır, Örn. "#123" veya "yok".
+   - `feature_flag`: isteğe bağlı; özellik bayrağı ("app/featureset" paketine göre) bu kodu etkinleştirir/devre dışı bırakır.
+- Örnekler:
 ```
-runner/tracer: add jaeger otel exporter
+koşucu/izleyici: jaeger otel ihracatçısını ekleyin
 
-Adds the jaeger exporter to our opentelemetery infra.
-
+Jaeger ihracatçısını açık telemetre altyapımıza ekler.
 category: feature
 ticket: #206
 feature_flag: jaeger_tracing
@@ -99,36 +94,35 @@ feature_flag: jaeger_tracing
 ```
 docs: improve contributing.md
 
-Fix typos in `contributing.md` and improves language.
-
+`contributing.md`deki yazım hatalarını düzeltin ve dili iyileştirin.
 category: docs
 ticket: none
 ```
 
-### Dev tools, git hooks and linters.
+### Geliştirme araçları, git kancaları ve filtreler.
 
-Charon is configured with [pre-commit](https://pre-commit.com) **githooks** that ensures pull
-requests adhere to a minimum standard and are consistent. The githooks are run as a GitHub action
-for each PR commit. But it is highly recommended running the githooks locally while developing for faster feedback.
+Charon, çekmeyi sağlayan [pre-commit](https://pre-commit.com) **githooks** ile yapılandırılmıştır
+istekler minimum bir standarda bağlıdır ve tutarlıdır. Githooks'lar bir GitHub eylemi olarak çalıştırılır
+her PR taahhüdü için. Ancak daha hızlı geri bildirim için geliştirme sırasında githook'ların yerel olarak çalıştırılması önemle tavsiye edilir.
 
-To install githooks:
-- Follow installation instructions [here](https://pre-commit.com/#installation) to install the `pre-commit` tool.
-- Once installed, run `pre-commit install` in the project's root directory. This will setup the hooks.
-- Note you can skip the hooks by committing with `-n`: `git commit -n -m "look mom no githooks"`
+Githook'ları kurmak için:
+- "pre-commit" aracını kurmak için [buradaki](https://pre-commit.com/#installation) kurulum talimatlarını izleyin.
+- Kurulduktan sonra, projenin kök dizininde `pre-commit install` komutunu çalıştırın. Bu, kancaları kuracaktır.
+- `-n` ile taahhütte bulunarak kancaları atlayabileceğinizi unutmayın: `git commit -n -m "look mom no githooks"`
 
-To update githooks:
+Githook'ları güncellemek için:
 ```sh
-pre-commit clean
+ön taahhüt temizliği
 ```
 
-The **linter** used is [golangci-lint](https://golangci-lint.run/). It runs as part of the githooks and is configured in [.golangci.yml](../.golangci.yml)
+Kullanılan **linter** [golangci-lint](https://golangci-lint.run/) şeklindedir. Githook'ların bir parçası olarak çalışır ve [.golangci.yml](../.golangci.yml) içinde yapılandırılır.
 
-Different **dev tools** are used in throughout the code base and are defined and installed from [tools.go](../tools.go). To install the dev tools run: `go generate tools.go`
+Kod tabanında farklı **geliştirme araçları** kullanılır ve bunlar [tools.go](../tools.go) adresinden tanımlanır ve kurulur. Geliştirme araçlarını yüklemek için şunu çalıştırın: `go createtools.go`
 
-## Code Review
-We tend to closely follow the following code review structure:
+## Kod incelemesi
+Aşağıdaki kod inceleme yapısını yakından takip etme eğilimindeyiz:
 <div><img src="./images/code_review_pyramid.svg" /></div>
 
-## Anything missing?
+## Herhangi bir şey eksik mi?
 
-This is a living document. Feel free to improve the contribution guide.
+Bu canlı bir belge. Katkı kılavuzunu geliştirmekte özgürsünüz.
